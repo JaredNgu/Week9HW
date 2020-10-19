@@ -1,8 +1,8 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v4.json",
-  "width": 1000,
-  "height": 1000,
-  "title": "House prices across Victoria",
+  "width": 800,
+  "height": 500,
+  "title": "Earthquakes of magnitude 4 or large between 4 Oct 2020 and 10 Oct 2020",
   "projection": {"type": "equalEarth"},
   "layer": [
     {
@@ -18,14 +18,18 @@
       },
       "mark": {"type": "circle", "tooltip": {"content": "data"}},
       "encoding": {
-        "longitude": {"field": "longitude", "type": "quantitative"},
-        "latitude": {"field": "latitude", "type": "quantitative"},
+        "longitude": {"field": "Longtitude", "type": "quantitative"},
+        "latitude": {"field": "Lattitude", "type": "quantitative"},
         "size": {
-          "field": "price",
+          "field": "Price",
           "type": "quantitative",
-          "scale": {"domain": [0,10]}
+          "scale": {"domain": [4, 8]}
+        },
+        "color": {
+          "field": "Distance",
+          "type": "quantitative",
+          "scale": {"scheme": "reds"}
         }
-      
       }
     }
   ]

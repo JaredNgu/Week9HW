@@ -1,25 +1,18 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v4.json",
-  "width": 1000,
-  "height": 1000,
-  "title": "COVID-19 Cases per Country (13 Oct 2020)",
+  "width": 500,
+  "height": 500,
+   "title": "Victoria's Most Expensive Housing Suburbs",
   "data": {
     "url": "https://raw.githubusercontent.com/JaredNgu/Week9HW/main/homework10viz1.csv"
   },
-"mark": "circle",
- "encoding": {
- "x": {
- "field": "Suburbs",
- "type": "quantitative",
- "title": "Confirmed Cases"
- },
- "y": {
- "field": "Average of Price",
- "type": "quantitative"
- },
- "color":{ 
+  "mark": "bar",
+  "encoding": {
+    "x": {"field": "Suburbs", "type": "nominal", "axis": {"labelAngle": 0}},
+    "y": {"field": "Average of Price", "type": "quantitative"},
+  "color": {
  "field": "Region",
  "type": "nominal"
  }
- }
+  }
 }
